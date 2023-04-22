@@ -1,15 +1,21 @@
 @use './../../styles/vars';
 
+body {
+  background-color: vars.$color-main;
+  color: vars.$color-text;
+}
+
 .app {
-  max-width: 820px;
+  width: 90%;
+  max-width: 800px;
   margin: 0 auto;
   min-height: 100vh;
-  padding: 2rem;
-  text-align: center;
-
-  &__title {
-    text-align: center;
-    font-size: 2rem;
-    color: vars.$primary;
+  background-color: vars.$color-inner;
+  padding: 1rem;
+  &__header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
