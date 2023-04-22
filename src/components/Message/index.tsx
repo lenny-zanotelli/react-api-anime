@@ -1,8 +1,23 @@
+import { Alert, AlertTitle } from '@mui/material';
 import './styles.scss';
 
-function Message() {
+interface MessageProps {
+  message: string;
+}
+
+function Message(props: MessageProps) {
+  const { message } = props;
   return (
-    <div>La recherche a donné 30 results</div>
+    <Alert
+      severity="info"
+      sx={{
+        background: 'white', my: '1rem', border: '1px solid white', borderRadius: '10px', boxShadow: '5px 5px 5px #ecf0f1',
+      }}
+    >
+      <AlertTitle>Info</AlertTitle>
+      {message}
+    </Alert>
+
   );
 }
 

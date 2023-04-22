@@ -1,4 +1,4 @@
-import { Box, Container, TextField } from '@mui/material';
+import { Container, TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import './styles.scss';
 
@@ -11,7 +11,7 @@ function SearchBar() {
         display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', border: '1px solid white', borderRadius: '10px', my: '1rem', boxShadow: '5px 5px 5px #ecf0f1',
       }}
     >
-      <SearchIcon sx={{ fontSize: '40' }} />
+      <SearchIcon sx={{ fontSize: '2rem', marginRight: '0.5rem' }} />
       <TextField
         id="outlined-basic"
         label="Search"

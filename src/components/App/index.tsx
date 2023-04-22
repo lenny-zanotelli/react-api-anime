@@ -1,17 +1,15 @@
 import ReposResults from '../ReposResults';
 import SearchBar from '../SearchBar';
 import Message from '../Message';
-import logo from '../../assets/logo-github.png';
+import Header from '../Header';
 import './styles.scss';
 
 function App() {
   return (
     <div className="app">
-      <header className="app__header">
-        <img className="app__banner" src={logo} alt="logo github" />
-      </header>
+      <Header />
       <SearchBar />
-      <Message />
+      <Message message="La recherche a donnée 30 resultats" />
       <ReposResults />
 
     </div>
