@@ -1,5 +1,6 @@
 export interface Root {
   data: Daum[]
+  pagination: Pagination
 }
 
 export interface Daum {
