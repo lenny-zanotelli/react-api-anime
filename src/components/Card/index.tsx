@@ -1,32 +1,33 @@
 import {
   CardContent, Card as CardUI, CardMedia, Typography, Grid,
 } from '@mui/material';
-import { IRepo } from '../../@types/github';
+import { Daum } from '../../@types/anime';
 
 interface CardRepos {
-  repo: IRepo
+  anime: Daum
 }
 
-function Card({ repo }: CardRepos) {
-  const desc = repo.description ? repo.description : 'No Description';
+function Card({ anime }: CardRepos) {
+  const desc = anime.synopsis ? anime.synopsis : 'No Description';
 
   return (
     <Grid item xs={2} sm={4} md={4}>
       <CardUI sx={{ maxWidth: 345 }}>
         <CardMedia
           sx={{ height: 200 }}
-          image={repo.owner.avatar_url}
-          title={repo.name}
+          image={anime.images.jpg.image_url}
+          title={anime.title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {repo.name}
+            {anime.title}
           </Typography>
           <Typography sx={{ fontSize: 14 }} color="#2c3e50" gutterBottom>
-            {repo.owner.login}
+            {anime.rank}
           </Typography>
           <Typography variant="body2" color="#2c3e50">
-            {repo.description}
+            {anime.synopsis?.slice(0, 200)}
+            {anime.synopsis && anime.synopsis.length > 200 && '...'}
           </Typography>
         </CardContent>
       </CardUI>

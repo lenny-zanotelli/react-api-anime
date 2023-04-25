@@ -1,13 +1,13 @@
 import { Box, Grid } from '@mui/material';
 import Card from '../Card';
-import { IRepo } from '../../@types/github';
+import { Daum } from '../../@types/anime';
 import './styles.scss';
 
 interface ReposResultProps {
-  repos: IRepo[];
+  data: Daum[];
 }
 
-function ReposResult({ repos }: ReposResultProps) {
+function ReposResult({ data }: ReposResultProps) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
@@ -15,10 +15,10 @@ function ReposResult({ repos }: ReposResultProps) {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 4, sm: 8, md: 12 }}
       >
-        {repos.map((repo) => (
+        {data.map((anime) => (
           <Card
-            key={repo.id}
-            repo={repo}
+            key={anime.mal_id}
+            anime={anime}
           />
         ))}
       </Grid>
